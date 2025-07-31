@@ -14,7 +14,7 @@ def imagem(request, foto_id):
 
 
 def buscar(request):
-    fotografias = Fotografia.objects.order_by("data_reg").filter(publicada=True)
+    fotografias = Fotografia.objects.filter(publicada=True)
 
     if "buscar" in request.GET:
         nome = request.GET['buscar']
